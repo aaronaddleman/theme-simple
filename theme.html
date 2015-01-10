@@ -106,12 +106,6 @@
                                     <span class="post-link-url"><i class="icon-share"></i> <a href="{{ post.url }}" target="_blank">{{ post.url }}</a></span>
                                     {% endif %}
                                 </div>
-                                <div class="location">
-                                    Posted near:
-                                    {% if post.location %}
-                                        near {{ post.location.lat }}, {{ post.location.lng }}
-                                    {% endif %}
-                                </div>
                             </div>
                         </article>
                     {% endfor %}
@@ -226,6 +220,13 @@
                         <div class="page-content">
                             {{ page.content }}
                         </div>
+                        <div class="location">
+                            Posted near:
+                            {% if post.location %}
+                                near {{ post.location.lat }}, {{ post.location.lng }}
+                            {% endif %}
+                        </div>
+
                     </div>
 
                 {% endif %}
