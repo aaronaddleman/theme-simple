@@ -88,9 +88,6 @@
                                 <div class="post-metadata">
                                     <div class="left">
                                         <p class="post-byline">Posted by {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time>
-                                        {% if post.location %}
-                                        near {{ post.location.lat }}, {{ post.location.lng }}
-                                        {% endif %}
                                         </p>
                                     </div>
                                     <div class="right">
@@ -107,6 +104,12 @@
                                     {{ post.content }}
                                     {% if post.type == 'link' or post.type == 'webclip' %}
                                     <span class="post-link-url"><i class="icon-share"></i> <a href="{{ post.url }}" target="_blank">{{ post.url }}</a></span>
+                                    {% endif %}
+                                </div>
+                                <div class="location">
+                                    Posted near:
+                                    {% if post.location %}
+                                        near {{ post.location.lat }}, {{ post.location.lng }}
                                     {% endif %}
                                 </div>
                             </div>
