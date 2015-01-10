@@ -1,7 +1,7 @@
 {
   "name": "theme-simple",
   "description": "A simple Postach.io theme",
-  "repository": "https://github.com/postachio/theme-simple.git",
+  "repository": "https://github.com/aaronaddleman/theme-simple.git",
   "devDependencies": {
     "gulp": "~3.8.7",
     "gulp-concat": "~2.3.4",
