@@ -144,6 +144,12 @@
                             <div class="post-content" data-type-cleanup="true">
                               {{ post.content }}
                             </div>
+                            <div class="location">
+                                Posted near:
+                                {% if post.location %}
+                                    near {{ post.location.lat }}, {{ post.location.lng }}
+                                {% endif %}
+                            </div>
                             <div class="post-socialbar">
                               {{ theme.social.bar }}
                             </div>
@@ -220,13 +226,6 @@
                         <div class="page-content">
                             {{ page.content }}
                         </div>
-                        <div class="location">
-                            Posted near:
-                            {% if post.location %}
-                                near {{ post.location.lat }}, {{ post.location.lng }}
-                            {% endif %}
-                        </div>
-
                     </div>
 
                 {% endif %}
