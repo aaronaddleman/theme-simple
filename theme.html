@@ -145,9 +145,9 @@
                               {{ post.content }}
                             </div>
                             <div class="location">
-                                Posted near:
                                 {% if post.location %}
-                                    near {{ post.location.lat }}, {{ post.location.lng }}
+                                Posted near:<br>
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ post.location.lat }},{{ post.location.lng }}&zoom=12&size=400x400"></img>
                                 {% endif %}
                             </div>
                             <div class="post-socialbar">
