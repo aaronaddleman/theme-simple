@@ -148,6 +148,9 @@
                                 {% if post.location %}
                                 Posted near:<br>
                                 <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ post.location.lat }},{{ post.location.lng }}&zoom=12&size=400x400"></img>
+
+                                {{ post.location }}
+                                
                                 {% endif %}
                             </div>
                             <div class="post-socialbar">
