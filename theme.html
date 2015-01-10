@@ -87,7 +87,11 @@
                                 </h2>
                                 <div class="post-metadata">
                                     <div class="left">
-                                        <p class="post-byline">Posted by {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
+                                        <p class="post-byline">Posted by {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time>
+                                        {{ if site post.location}}
+                                        near {{ post.location.lat }}, {{ post.location.lng }}
+                                        {{ endif}}
+                                        </p>
                                     </div>
                                     <div class="right">
                                         {% if post.tags %}
